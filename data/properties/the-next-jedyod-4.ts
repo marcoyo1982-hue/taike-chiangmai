@@ -8,7 +8,7 @@ const property: Property = {
 
   subtitle: "清邁 Jedyod 生活圈",
 
-  summary: "首頁顯示的簡短介紹。",
+  ssummary: "Jedyod 成熟生活圈，僅 54 戶的小型精品公寓，兼具自住與出租潛力。",
 
 
   description:
