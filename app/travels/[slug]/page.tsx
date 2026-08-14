@@ -3,6 +3,8 @@ import { travels } from "@/data/travels";
 import TravelInfo from "../../../components/TravelInfo";
 import GoogleMap from "@/components/GoogleMap";
 import Breadcrumb from "@/components/Breadcrumb";
+import LineCTA from "@/components/LineCTA";
+import { site } from "@/data/site";
 
 type Props = {
   params: Promise<{
@@ -71,6 +73,8 @@ export default async function TravelDetailPage({
   embed={travel.embed}
   link={travel.map}
 />
+
+<LineCTA line={site.lineCommunity} />
     </main>
   );
 }

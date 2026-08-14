@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import { life } from "@/data/life";
+import LineCTA from "@/components/LineCTA";
+import { site } from "@/data/site";
 
 export default async function LifeDetailPage({
   params,
@@ -39,6 +41,8 @@ export default async function LifeDetailPage({
           {article.description}
         </p>
       </section>
+
+      <LineCTA line={site.lineCommunity} />
     </main>
   );
 }

@@ -8,6 +8,8 @@ import GoogleMap from "@/components/GoogleMap";
 import FoodInfo from "@/components/FoodInfo";
 import FoodRating from "@/components/FoodRating";
 import FoodRecommend from "@/components/FoodRecommend";
+import LineCTA from "@/components/LineCTA";
+import { site } from "@/data/site";
 type Props = {
   params: Promise<{
     slug: string;
@@ -121,6 +123,8 @@ export default async function FoodDetailPage({
         phone={food.phone}
         price={food.price}
       />
+
+      <LineCTA line={site.lineCommunity} />
 
     </main>
   );

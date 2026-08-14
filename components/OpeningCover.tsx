@@ -11,16 +11,21 @@ export default function OpeningCover() {
     const played = sessionStorage.getItem("opening-played");
 
     if (!played) {
-      setShow(true);
-
-      setTimeout(() => {
+      const showTimer = window.setTimeout(() => setShow(true), 0);
+      const hideTimer = window.setTimeout(() => {
         setHide(true);
       }, 3800);
 
-      setTimeout(() => {
+      const closeTimer = window.setTimeout(() => {
         setShow(false);
         sessionStorage.setItem("opening-played", "true");
       }, 4800);
+
+      return () => {
+        window.clearTimeout(showTimer);
+        window.clearTimeout(hideTimer);
+        window.clearTimeout(closeTimer);
+      };
     }
   }, []);
 

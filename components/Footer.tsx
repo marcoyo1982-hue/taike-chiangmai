@@ -1,0 +1,28 @@
+import { site } from "@/data/site";
+
+export default function Footer() {
+  return (
+    <footer className="mt-24 border-t border-gray-200 bg-white">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-10">
+        <h3 className="text-xl font-bold">台客在清邁</h3>
+
+        <p className="text-gray-500">歡迎追蹤我的社群平台</p>
+
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 font-medium text-emerald-600">
+          <a href={site.facebook} target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+          <a href={site.instagram} target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+          <a href={site.threads} target="_blank" rel="noopener noreferrer">
+            Threads
+          </a>
+          <a href={site.lineCommunity} target="_blank" rel="noopener noreferrer">
+            LINE 社群
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}

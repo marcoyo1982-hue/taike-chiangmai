@@ -27,12 +27,18 @@ export default function PropertyInfo({
 }: PropertyInfoProps) {
   return (
     <>
-      <section className="mt-20">
-        <h2 className="text-3xl font-bold">
-          建案基本資訊
-        </h2>
+      <section className="mt-24">
+        <div className="mb-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-600">
+            PROPERTY INFO
+          </p>
 
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
+            建案基本資訊
+          </h2>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
           <InfoCard title="📍 區域" value={info.location} />
           <InfoCard title="🏢 建商" value={info.developer} />
@@ -40,43 +46,64 @@ export default function PropertyInfo({
           <InfoCard title="🏗 完工時間" value={info.completion} />
           <InfoCard title="🏢 樓層" value={info.floors} />
           <InfoCard title="🏘 總戶數" value={info.units} />
-          <InfoCard
-            title="🛏 房型"
-            value={info.roomTypes.join("、")}
-          />
+          <InfoCard title="🛏 房型" value={info.roomTypes.join("、")} />
           <InfoCard title="📐 使用面積" value={info.size} />
           <InfoCard title="💰 售價" value={info.price} />
 
         </div>
       </section>
 
-      <section className="mt-20">
-        <h2 className="text-3xl font-bold">
-          📍 周邊生活機能
-        </h2>
+      <section className="mt-28">
 
-        <div className="mt-8 space-y-4">
+        <div className="mb-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-600">
+            LOCATION
+          </p>
+
+          <h2 className="mt-2 text-4xl font-extrabold text-gray-900">
+            周邊生活機能
+          </h2>
+        </div>
+
+        <div className="space-y-5">
+
           {landmarks.map((item, index) => (
+
             <div
               key={index}
-              className="flex items-center justify-between rounded-xl border p-5"
+              className="group flex items-center justify-between rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl"
             >
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">
-                  {item.icon}
-                </span>
 
-                <span className="font-medium">
-                  {item.title}
-                </span>
+              <div className="flex items-center gap-5">
+
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 text-3xl">
+                  {item.icon}
+                </div>
+
+                <div>
+
+                  <p className="text-lg font-bold text-gray-900">
+                    {item.title}
+                  </p>
+
+                  <p className="mt-1 text-sm text-gray-500">
+                    開車約 {item.time}
+                  </p>
+
+                </div>
+
               </div>
 
-              <span className="font-semibold text-emerald-600">
+              <div className="rounded-full bg-emerald-600 px-5 py-2 font-semibold text-white">
                 {item.time}
-              </span>
+              </div>
+
             </div>
+
           ))}
+
         </div>
+
       </section>
     </>
   );
@@ -90,14 +117,16 @@ function InfoCard({
   value: string;
 }) {
   return (
-    <div className="rounded-xl border p-5">
-      <p className="text-sm text-gray-500">
+    <div className="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl">
+
+      <p className="text-sm font-medium text-gray-500">
         {title}
       </p>
 
-      <p className="mt-2 font-semibold">
+      <p className="mt-4 text-xl font-bold text-gray-900">
         {value}
       </p>
+
     </div>
   );
 }

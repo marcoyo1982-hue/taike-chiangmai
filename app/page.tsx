@@ -1,15 +1,13 @@
-import Navbar from "../components/Navbar";
 import FeatureCards from "../components/FeatureCards";
 import LatestPosts from "../components/LatestPosts";
 import AboutMe from "../components/AboutMe";
 import OpeningCover from "../components/OpeningCover";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <OpeningCover />
-
-      <Navbar />
 
       <main className="relative flex min-h-[78vh] lg:min-h-screen items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -40,6 +38,10 @@ export default function Home() {
             CHIANG MAI • THAILAND
           </p>
 
+          <p className="mb-4 text-sm font-semibold text-emerald-100 lg:text-base">
+            給想旅行、長住或置產清邁的台灣人
+          </p>
+
           <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl lg:text-8xl">
             探索真正的
             <br className="lg:hidden" />
@@ -53,12 +55,12 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 lg:mt-10 lg:flex-row lg:justify-center">
-            <a
+            <Link
               href="/property"
               className="inline-flex h-14 w-full items-center justify-center rounded-full bg-emerald-600 text-white transition-all duration-300 hover:bg-emerald-500 hover:shadow-xl lg:h-16 lg:w-56"
             >
               🏡 探索房產 →
-            </a>
+            </Link>
 
             <a
               href="#discover"

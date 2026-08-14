@@ -33,8 +33,8 @@ export default function AboutMe() {
           </p>
 
           <p className="mt-4 text-lg leading-9 text-gray-600">
-            如果你正在規劃清邁旅行、考慮長住，或想了解清邁房地產，
-            我希望我的經驗，能幫助你少走一些彎路，也更快找到屬於自己的清邁生活。
+            如果你正在規劃到清邁置產、長期生活，我希望我的經驗，
+            能幫助你少走一些彎路，也更快找到屬於自己的清邁生活。
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-4">
