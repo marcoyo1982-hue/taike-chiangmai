@@ -40,12 +40,12 @@ export default function Navbar() {
 
         {/* LINE */}
         <a
-          href={site.lineCommunity}
+          href={site.personalLine}
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-full bg-emerald-700 px-4 py-2 text-xs font-semibold text-white transition hover:bg-emerald-800 lg:px-6 lg:py-3 lg:text-sm"
         >
-          加入 LINE
+          諮詢房產
         </a>
 
       </nav>
