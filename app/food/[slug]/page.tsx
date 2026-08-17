@@ -9,6 +9,7 @@ import FoodInfo from "@/components/FoodInfo";
 import FoodRating from "@/components/FoodRating";
 import FoodRecommend from "@/components/FoodRecommend";
 import LineCTA from "@/components/LineCTA";
+import RelatedArticleLinks from "@/components/RelatedArticleLinks";
 import { site } from "@/data/site";
 type Props = {
   params: Promise<{
@@ -122,6 +123,13 @@ export default async function FoodDetailPage({
         openingHours={food.openingHours}
         phone={food.phone}
         price={food.price}
+      />
+
+      <RelatedArticleLinks
+        currentSlug={food.slug}
+        articles={foods.map((item) => ({ slug: item.slug, title: item.name }))}
+        basePath="/food"
+        title="更多清邁美食文章"
       />
 
       <LineCTA line={site.lineCommunity} />

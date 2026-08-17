@@ -3,6 +3,7 @@ import { travels } from "@/data/travels";
 import TravelInfo from "../../../components/TravelInfo";
 import GoogleMap from "@/components/GoogleMap";
 import Breadcrumb from "@/components/Breadcrumb";
+import Gallery from "@/components/Gallery";
 import LineCTA from "@/components/LineCTA";
 import { site } from "@/data/site";
 
@@ -62,11 +63,19 @@ export default async function TravelDetailPage({
         </p>
 
       </section>
+
+      <Gallery
+        folder="travels"
+        slug={travel.slug}
+        images={travel.gallery}
+        title="店內環境"
+      />
      <TravelInfo
   address={travel.address}
   openingHours={travel.openingHours}
   ticket={travel.ticket}
   transportation={travel.transportation}
+  phone={travel.phone}
 />
 
 <GoogleMap

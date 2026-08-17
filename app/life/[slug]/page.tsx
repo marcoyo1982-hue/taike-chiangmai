@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { life } from "@/data/life";
 import LineCTA from "@/components/LineCTA";
+import RelatedArticleLinks from "@/components/RelatedArticleLinks";
 import { site } from "@/data/site";
 
 export default async function LifeDetailPage({
@@ -41,6 +42,13 @@ export default async function LifeDetailPage({
           {article.description}
         </p>
       </section>
+
+      <RelatedArticleLinks
+        currentSlug={article.slug}
+        articles={life.map((item) => ({ slug: item.slug, title: item.title }))}
+        basePath="/life"
+        title="更多清邁生活文章"
+      />
 
       <LineCTA line={site.lineCommunity} />
     </main>

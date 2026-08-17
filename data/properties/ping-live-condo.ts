@@ -6,7 +6,7 @@ const property: Property = {
 
   name: "Ping Live Condo",
 
-  subtitle: "清邁河畔精品公寓",
+  subtitle: "清邁大學精品公寓",
 
   summary: "位於清邁大學生活圈，兼具自住與出租潛力的精品公寓。",
 

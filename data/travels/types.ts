@@ -19,6 +19,8 @@ export interface Travel {
 
   transportation: string;
 
+  phone?: string;
+
   map: string;
 
   embed: string;

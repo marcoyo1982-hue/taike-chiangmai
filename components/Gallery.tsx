@@ -29,7 +29,9 @@ export default function Gallery({
               src={
                 folder === "properties"
                   ? `/properties/${slug}/gallery/${image}.jpg`
-                  : `/images/${folder}/${slug}/${image}.jpg`
+                  : folder === "travels"
+                    ? `/travels/${slug}/gallery/${image}.jpg`
+                    : `/images/${folder}/${slug}/${image}.jpg`
               }
               alt={`${slug}-${index + 1}`}
               className="h-64 w-full rounded-2xl object-cover"
