@@ -5,6 +5,7 @@ export default function Navbar() {
   const menus = [
     { name: "房產", href: "/property" },
     { name: "美食", href: "/food" },
+    { name: "旅遊", href: "/travels" },
     { name: "生活", href: "/life" },
     { name: "關於我", href: "/about" },
   ];
