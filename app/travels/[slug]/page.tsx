@@ -58,7 +58,7 @@ export default async function TravelDetailPage({
           景點介紹
         </h2>
 
-        <p className="mt-6 leading-8 text-gray-700">
+        <p className="mt-6 whitespace-pre-line leading-8 text-gray-700">
           {travel.description}
         </p>
 
@@ -70,20 +70,24 @@ export default async function TravelDetailPage({
         images={travel.gallery}
         title="店內環境"
       />
-     <TravelInfo
-  address={travel.address}
-  openingHours={travel.openingHours}
-  ticket={travel.ticket}
-  transportation={travel.transportation}
-  phone={travel.phone}
-/>
+      {(travel.address || travel.openingHours || travel.ticket || travel.transportation || travel.phone) && (
+        <TravelInfo
+          address={travel.address}
+          openingHours={travel.openingHours}
+          ticket={travel.ticket}
+          transportation={travel.transportation}
+          phone={travel.phone}
+        />
+      )}
 
-<GoogleMap
-  embed={travel.embed}
-  link={travel.map}
-/>
+      {travel.embed && (
+        <GoogleMap
+          embed={travel.embed}
+          link={travel.map}
+        />
+      )}
 
-<LineCTA line={site.lineCommunity} />
+      {(travel.map || travel.embed) && <LineCTA line={site.lineCommunity} />}
     </main>
   );
 }
