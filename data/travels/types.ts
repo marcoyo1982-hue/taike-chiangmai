@@ -11,6 +11,10 @@ export interface Travel {
 
   gallery: string[];
 
+  galleryTitle?: string;
+
+  downloadableGallery?: boolean;
+
   address: string;
 
   openingHours: string;

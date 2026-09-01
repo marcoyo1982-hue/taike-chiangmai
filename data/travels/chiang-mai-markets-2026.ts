@@ -115,7 +115,9 @@ const travel: Travel = {
 
 ⚠️ 最後提醒：市集營業時間可能因天氣、節慶、活動安排或其他因素調整。出發前建議再確認各市集／主辦單位的最新公告，實際營業狀況以當日最新資訊為準。`,
   cover: "cover.jpg",
-  gallery: [],
+  gallery: ["saturday.png", "friday.png", "weekday.png"],
+  galleryTitle: "市集大補帖",
+  downloadableGallery: true,
   address: "",
   openingHours: "",
   ticket: "",

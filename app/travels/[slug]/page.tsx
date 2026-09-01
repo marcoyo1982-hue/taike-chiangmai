@@ -68,7 +68,8 @@ export default async function TravelDetailPage({
         folder="travels"
         slug={travel.slug}
         images={travel.gallery}
-        title="店內環境"
+        title={travel.galleryTitle ?? "店內環境"}
+        downloadable={travel.downloadableGallery}
       />
       {(travel.address || travel.openingHours || travel.ticket || travel.transportation || travel.phone) && (
         <TravelInfo
