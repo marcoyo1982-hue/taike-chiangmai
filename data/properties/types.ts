@@ -17,6 +17,8 @@ export interface Property {
 
   videos: string[];
 
+  videoTitles?: string[];
+
   map: string;
 
   embed: string;
@@ -26,6 +28,11 @@ export interface Property {
   lineCommunity: string;
 
   pdf: string;
+
+  pdfs?: {
+    label: string;
+    path: string;
+  }[];
 
   gallery: string[];
 

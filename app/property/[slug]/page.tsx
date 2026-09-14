@@ -101,6 +101,7 @@ export default async function PropertyDetailPage({
       <PropertyVideo
   slug={property.slug}
   videos={property.videos}
+  videoTitles={property.videoTitles}
 />
 
       <PropertyInfo
@@ -108,13 +109,16 @@ export default async function PropertyDetailPage({
         landmarks={property.landmarks}
       />
 
-      <GoogleMap
-        embed={property.embed}
-        link={property.map}
-      />
+      {property.embed && (
+        <GoogleMap
+          embed={property.embed}
+          link={property.map}
+        />
+      )}
 
       <PdfDownload
         pdf={property.pdf}
+        pdfs={property.pdfs}
       />
 
       <ConsultantCard

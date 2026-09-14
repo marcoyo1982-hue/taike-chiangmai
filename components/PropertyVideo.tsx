@@ -1,11 +1,13 @@
 type PropertyVideoProps = {
   slug: string;
   videos: string[];
+  videoTitles?: string[];
 };
 
 export default function PropertyVideo({
   slug,
   videos,
+  videoTitles,
 }: PropertyVideoProps) {
   if (!videos || videos.length === 0) {
     return null;
@@ -18,11 +20,16 @@ export default function PropertyVideo({
       </h2>
 
       <div className="mt-8 space-y-8 max-w-md mx-auto">
-        {videos.map((video) => (
+        {videos.map((video, index) => (
           <div
             key={video}
             className="overflow-hidden rounded-2xl border"
           >
+            {videoTitles?.[index] && (
+              <p className="border-b px-5 py-4 font-bold text-gray-900">
+                {videoTitles[index]}
+              </p>
+            )}
             <video
               controls
               className="w-full h-auto"
