@@ -87,7 +87,7 @@ export default async function FoodDetailPage({
       
         src={`/images/foods/${food.slug}/${food.cover}`}
         alt={food.name}
-        className="mt-10 h-[500px] w-full rounded-3xl object-cover"
+        className="mt-10 h-auto w-full rounded-3xl"
       />
 
       <section className="mt-16">

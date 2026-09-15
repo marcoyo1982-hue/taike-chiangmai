@@ -50,7 +50,7 @@ Caramellow Cafe｜Chiang Mai
   cover: "cover.jpg",
   date: "2026-09-15",
   rating: "台客推薦",
-  gallery: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+  gallery: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"],
   map: "https://www.google.com/maps/search/?api=1&query=Caramellow+Cafe%2C+223+Mahidol+Road%2C+Chiang+Mai",
   embed: "https://www.google.com/maps?q=Caramellow+Cafe,+223+Mahidol+Road,+Chiang+Mai&output=embed",
   address: "223 Mahidol Road, Pa Daet, Mueang Chiang Mai, Chiang Mai 50100",
