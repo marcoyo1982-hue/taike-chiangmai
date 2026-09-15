@@ -2,6 +2,10 @@ import Link from "next/link";
 import { properties } from "@/data/properties";
 
 const propertyGuides: Record<string, { label: string; detail: string }> = {
+  "one-plus-jedyod-7": {
+    label: "適合首購與自住",
+    detail: "重視寧曼與大學生活圈便利性的人",
+  },
   "the-next-jedyod-4": {
     label: "適合首購與自住",
     detail: "想住進 Jedyod 生活圈的人",
