@@ -75,7 +75,7 @@ const travel: Travel = {
   ticket: "入場與投幣機關規則請以現場公告為準；投幣裝置為 10 泰銖",
   transportation: "距離清邁古城約 40 分鐘車程；建議安排來回包車或先與司機約定等候。",
   map: "https://maps.app.goo.gl/g3xgL8W27UsbAfuP7",
-  embed: "https://www.google.com/maps?q=Wat+Mae+Kaet+Noi,+Chiang+Mai&output=embed",
+  embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.202870027112!2d99.03398477410667!3d18.878079182286164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da2360cd976831%3A0x130292268a26549d!2sWat%20Si%20Don%20Chai%20Pa%20Tung%20Ngam%20(Wat%20Mae%20Kaet%20Noi)!5e0!3m2!1szh-TW!2stw!4v1790741509177!5m2!1szh-TW!2stw",
 };
 
 export default travel;

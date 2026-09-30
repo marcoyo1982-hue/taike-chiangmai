@@ -52,7 +52,7 @@ Caramellow Cafe｜Chiang Mai
   rating: "台客推薦",
   gallery: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"],
   map: "https://www.google.com/maps/search/?api=1&query=Caramellow+Cafe%2C+223+Mahidol+Road%2C+Chiang+Mai",
-  embed: "https://www.google.com/maps?q=Caramellow+Cafe,+223+Mahidol+Road,+Chiang+Mai&output=embed",
+  embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6689635125463!2d98.97839097410329!3d18.768317982373937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da31c7c670a3df%3A0xff420f0496dead1f!2sCaramellow%20Cafe!5e0!3m2!1szh-TW!2stw!4v1790741549510!5m2!1szh-TW!2stw",
   address: "223 Mahidol Road, Pa Daet, Mueang Chiang Mai, Chiang Mai 50100",
   openingHours: "每日 09:00–19:00",
   phone: "053 284 114",

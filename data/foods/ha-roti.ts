@@ -31,7 +31,7 @@ const food: Food = {
   gallery: [],
   videos: ["breakfast.mp4"],
   map: "https://maps.app.goo.gl/ZoKCDYm53Drzb8Mw7",
-  embed: "https://www.google.com/maps?q=Ha+Roti,+Chiang+Mai&output=embed",
+  embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6752345338923!2d98.9968735741033!3d18.76803808237422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3157b867c24f%3A0x113752135e33099a!2z4Liu4LiyIOC5guC4o-C4leC4tSBIYSByb3Rp!5e0!3m2!1szh-TW!2stw!4v1790741578624!5m2!1szh-TW!2stw",
   address: "",
   openingHours: "",
   phone: "",

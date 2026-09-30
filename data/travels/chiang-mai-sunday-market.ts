@@ -50,7 +50,7 @@ const travel: Travel = {
   ticket: "免費入場",
   transportation: "建議直接前往帕邢寺，逆著人潮往塔佩門方向逛。",
   map: "https://maps.app.goo.gl/wAaCTXMhvQvz5E2S6",
-  embed: "https://www.google.com/maps?q=Chiang+Mai+Sunday+Walking+Street&output=embed",
+  embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.223735032568!2d98.98552527410386!3d18.788179982358017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b114c0418fd%3A0xd24105acd500a90e!2z6YCx5pel5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1790741443695!5m2!1szh-TW!2stw",
 };
 
 export default travel;
