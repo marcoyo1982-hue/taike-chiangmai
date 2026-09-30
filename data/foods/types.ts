@@ -20,6 +20,9 @@ export interface Food {
   // 圖片
   gallery: string[];
 
+  // 店家影片
+  videos?: string[];
+
   // 店家資訊
   map: string;
   embed: string;

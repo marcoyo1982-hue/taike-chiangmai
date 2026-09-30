@@ -8,6 +8,7 @@ import GoogleMap from "@/components/GoogleMap";
 import FoodInfo from "@/components/FoodInfo";
 import FoodRating from "@/components/FoodRating";
 import FoodRecommend from "@/components/FoodRecommend";
+import FoodVideo from "@/components/FoodVideo";
 import LineCTA from "@/components/LineCTA";
 import RelatedArticleLinks from "@/components/RelatedArticleLinks";
 import { site } from "@/data/site";
@@ -106,24 +107,33 @@ export default async function FoodDetailPage({
         items={food.recommend}
       />
 
-      <Gallery
-        folder="foods"
+      <FoodVideo
         slug={food.slug}
-        images={food.gallery}
-        title="店家照片"
+        videos={food.videos}
       />
+
+      {food.gallery.length > 0 && (
+        <Gallery
+          folder="foods"
+          slug={food.slug}
+          images={food.gallery}
+          title="店家照片"
+        />
+      )}
 
       <GoogleMap
         embed={food.embed}
         link={food.map}
       />
 
-      <FoodInfo
-        address={food.address}
-        openingHours={food.openingHours}
-        phone={food.phone}
-        price={food.price}
-      />
+      {(food.address || food.openingHours || food.phone || food.price) && (
+        <FoodInfo
+          address={food.address}
+          openingHours={food.openingHours}
+          phone={food.phone}
+          price={food.price}
+        />
+      )}
 
       <RelatedArticleLinks
         currentSlug={food.slug}

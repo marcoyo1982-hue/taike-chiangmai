@@ -49,13 +49,13 @@ export default async function TravelDetailPage({
       <img
         src={`/travels/${travel.slug}/${travel.cover}`}
         alt={travel.name}
-        className="mt-10 h-[500px] w-full rounded-3xl object-cover"
+        className="mt-10 h-auto w-full rounded-3xl"
       />
 
       <section className="mt-16">
 
         <h2 className="text-3xl font-bold">
-          景點介紹
+          {travel.contentTitle ?? "景點介紹"}
         </h2>
 
         <p className="mt-6 whitespace-pre-line leading-8 text-gray-700">

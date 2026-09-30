@@ -24,7 +24,7 @@ export default function Gallery({
           📷 照片整理中
         </div>
       ) : (
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className={`mt-8 grid gap-6 ${images.length === 1 ? "grid-cols-1" : "md:grid-cols-3"}`}>
           {images.map((image, index) => {
             const extension = image.includes(".") ? "" : ".jpg";
             const source =
@@ -39,7 +39,9 @@ export default function Gallery({
                 <img
                   src={source}
                   alt={`${slug}-${index + 1}`}
-                  className="h-64 w-full rounded-2xl object-cover"
+                  className={images.length === 1
+                    ? "h-auto w-full rounded-2xl"
+                    : "h-64 w-full rounded-2xl object-cover"}
                 />
 
                 {downloadable && (

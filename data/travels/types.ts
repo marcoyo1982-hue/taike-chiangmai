@@ -5,6 +5,8 @@ export interface Travel {
 
   subtitle: string;
 
+  contentTitle?: string;
+
   description: string;
 
   cover: string;
