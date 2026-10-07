@@ -3,11 +3,11 @@ import { Life } from "./types";
 const life: Life = {
   slug: "chiangmai-change",
 
-  title: "2018 年的清邁，和 2026 年的現在，最大的差別是什麼？",
+  title: "為什麼平日下午，清邁的 MAYA 和 Central Festival 還是一堆人？",
 
-  subtitle: "八年的時間，這座城市悄悄變了。",
+  subtitle: "住久了才發現，百貨公司也是清邁人的日常生活空間。",
 
-  summary: "住了這麼多年，我發現改變最大的，不是房子，也不是觀光客，而是整座城市的節奏。",
+  summary: "喝咖啡、工作、辦銀行、吃飯買菜：從在地生活的角度，聊聊清邁人為什麼常往百貨公司跑。",
 
   description: `很多人來清邁後都很納悶：「為什麼明明是平日下午，MAYA 和 Central Festival 還是一堆人？大家都不用上班嗎？」
 老實說，剛搬來清邁的時候，我也一直以為百貨公司主要是給觀光客逛的。但住久了才發現，我完全搞錯了。

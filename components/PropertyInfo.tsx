@@ -19,15 +19,17 @@ type Info = {
 type PropertyInfoProps = {
   info: Info;
   landmarks: Landmark[];
+  section?: "all" | "facts" | "location";
 };
 
 export default function PropertyInfo({
   info,
   landmarks,
+  section = "all",
 }: PropertyInfoProps) {
   return (
     <>
-      <section className="mt-24">
+      {section !== "location" && <section className="mt-10">
         <div className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-600">
             PROPERTY INFO
@@ -38,22 +40,22 @@ export default function PropertyInfo({
           </h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
+          <InfoCard title="💰 售價" value={info.price} />
+          <InfoCard title="📐 使用面積" value={info.size} />
+          <InfoCard title="🛏 房型" value={info.roomTypes.join("、")} />
           <InfoCard title="📍 區域" value={info.location} />
           <InfoCard title="🏢 建商" value={info.developer} />
           <InfoCard title="🏠 產權" value={info.ownership} />
           <InfoCard title="🏗 完工時間" value={info.completion} />
           <InfoCard title="🏢 樓層" value={info.floors} />
           <InfoCard title="🏘 總戶數" value={info.units} />
-          <InfoCard title="🛏 房型" value={info.roomTypes.join("、")} />
-          <InfoCard title="📐 使用面積" value={info.size} />
-          <InfoCard title="💰 售價" value={info.price} />
 
         </div>
-      </section>
+      </section>}
 
-      <section className="mt-28">
+      {section !== "facts" && <section className="mt-16">
 
         <div className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-600">
@@ -87,14 +89,14 @@ export default function PropertyInfo({
                   </p>
 
                   <p className="mt-1 text-sm text-gray-500">
-                    開車約 {item.time}
+                    交通時間為概估，依路線與路況而異
                   </p>
 
                 </div>
 
               </div>
 
-              <div className="rounded-full bg-emerald-600 px-5 py-2 font-semibold text-white">
+              <div className="ml-3 shrink-0 rounded-full bg-emerald-700 px-3 py-2 text-sm font-semibold text-white">
                 {item.time}
               </div>
 
@@ -104,7 +106,7 @@ export default function PropertyInfo({
 
         </div>
 
-      </section>
+      </section>}
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function FoodVideo({
       <div className="mx-auto mt-8 max-w-md space-y-8">
         {videos.map((video) => (
           <div key={video} className="overflow-hidden rounded-2xl border">
-            <video controls className="h-auto w-full">
+            <video controls playsInline preload="none" className="h-auto w-full">
               <source src={`/images/foods/${slug}/${video}`} type="video/mp4" />
               您的瀏覽器不支援影片播放。
             </video>

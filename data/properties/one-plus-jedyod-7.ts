@@ -72,7 +72,7 @@ Karnkanok Property 是深耕清邁超過 20 年的在地開發商。依提供資
     price: "268 萬泰銖起",
   },
   landmarks: [
-    { icon: "🛍️", title: "MAYA Lifestyle Shopping Center", time: "8 分鐘" },
+    { icon: "🛍️", title: "MAYA Lifestyle Shopping Center", time: "步行約 8 分鐘" },
     { icon: "🎓", title: "清邁大學", time: "車程約 5 分鐘" },
     { icon: "☕", title: "Jedyod 生活圈", time: "5 分鐘" },
   ],

@@ -1,25 +1,8 @@
 import Link from "next/link";
 
-const articles = [
-  {
-    slug: "helmet",
-    title: "泰國人為什麼很多都不戴安全帽？",
-    category: "交通文化",
-    image: "/images/articles/helmet.jpg",
-  },
-  {
-    slug: "chiangmai-change",
-    title: "「為什麼明明是平日下午，MAYA 和 Central Festival 還是一堆人？大家都不用上班嗎？」",
-    category: "簽證",
-    image: "/images/articles/khaosoi.jpg",
-  },
-  {
-    slug: "chiangmai-red-truck",
-    title: "【清邁最強省錢神車攻略！30泰銖跑遍全市區 🇹🇭】",
-    category: "生活資訊",
-    image: "/images/articles/property.jpg",
-  },
-];
+import { life as articles } from "@/data/life";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "清邁在地生活｜台客在清邁", description: "台灣人在清邁的生活觀察、交通文化與日常經驗。", alternates: { canonical: "/life" }, openGraph: { title: "清邁在地生活｜台客在清邁", description: "閱讀台客在清邁的日常生活觀察。", images: ["/images/hero/hero-v1.jpg"] } };
 
 export default function LifePage() {
   return (
@@ -38,7 +21,7 @@ export default function LifePage() {
             className="overflow-hidden rounded-3xl border bg-white shadow-sm hover:shadow-lg"
           >
             <img
-              src={article.image}
+              src={`/images/life/${article.slug}/${article.cover}`}
               alt={article.title}
               className="h-56 w-full object-cover"
             />

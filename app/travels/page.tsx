@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { travels } from "@/data/travels";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "清邁旅遊｜台客在清邁", description: "清邁景點、市集、在地體驗與旅行準備資訊。", alternates: { canonical: "/travels" }, openGraph: { title: "清邁旅遊｜台客在清邁", description: "探索清邁景點、市集與在地體驗。", images: ["/images/hero/hero-v1.jpg"] } };
 
 export default function TravelsPage() {
   return (

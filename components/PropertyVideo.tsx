@@ -32,6 +32,9 @@ export default function PropertyVideo({
             )}
             <video
               controls
+              playsInline
+              preload="none"
+              poster={`/properties/${slug}/cover.jpg`}
               className="w-full h-auto"
             >
               <source

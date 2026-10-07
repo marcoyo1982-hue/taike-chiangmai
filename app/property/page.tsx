@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { properties } from "@/data/properties";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "清邁房產｜台客在清邁", description: "比較清邁建案的售價、面積、房型與生活機能，聯絡台客了解適合你的房產。", alternates: { canonical: "/property" } };
 
 const propertyGuides: Record<string, { label: string; detail: string }> = {
   "one-plus-jedyod-7": {
@@ -26,7 +29,7 @@ export default function PropertyPage() {
       <h1 className="text-5xl font-bold">清邁房產</h1>
 
       <p className="mt-4 text-gray-600">
-        精選清邁公寓與別墅，點擊查看完整建案資訊。
+        比較清邁建案的價格、房型與生活圈，再一起確認適合你的選擇。
       </p>
 
       <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -59,6 +62,11 @@ export default function PropertyPage() {
               <p className="mt-4 text-sm font-medium text-gray-600">
                 {propertyGuides[property.slug]?.detail}
               </p>
+              <dl className="mt-5 space-y-2 border-t border-stone-100 pt-4 text-sm">
+                <div><dt className="text-gray-500">售價</dt><dd className="mt-1 text-lg font-bold text-emerald-800">{property.info.price}</dd></div>
+                <div><dt className="inline text-gray-500">面積：</dt><dd className="inline">{property.info.size}</dd></div>
+                <div><dt className="inline text-gray-500">房型：</dt><dd className="inline">{property.info.roomTypes.join("、")}</dd></div>
+              </dl>
 
               <p className="mt-6 font-semibold text-emerald-600">
                 查看建案 →

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { foods } from "@/data/foods";
+import type { Metadata } from "next";
+export const metadata: Metadata = { title: "清邁美食｜台客在清邁", description: "台客分享清邁在地美食、咖啡館與店家資訊。", alternates: { canonical: "/food" }, openGraph: { title: "清邁美食｜台客在清邁", description: "探索清邁在地美食與咖啡館。", images: ["/images/hero/hero-v1.jpg"] } };
 
 export default function FoodPage() {
   const featuredFoods = foods.slice(0, 4);

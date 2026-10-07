@@ -1,3 +1,4 @@
+import PropertyInquiry from "@/components/PropertyInquiry";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { properties } from "@/data/properties";
@@ -39,11 +40,13 @@ export async function generateMetadata({
 
   return {
     title: `${property.name}｜台客在清邁`,
-    description: property.description,
+    description: property.summary,
 
+    alternates: { canonical: `/property/${slug}` },
     openGraph: {
+      url: `/property/${slug}`,
       title: `${property.name}｜台客在清邁`,
-      description: property.description,
+      description: property.summary,
       images: [
         `/properties/${property.slug}/cover.jpg`,
       ],
@@ -70,7 +73,7 @@ export default async function PropertyDetailPage({
 
       <Breadcrumb title={property.name} />
 
-      <h1 className="text-5xl font-bold">
+      <h1 className="text-3xl leading-snug font-bold sm:text-5xl">
         {property.name}
       </h1>
 
@@ -83,10 +86,13 @@ export default async function PropertyDetailPage({
       <img
         src={`/properties/${property.slug}/cover.jpg`}
         alt={property.name}
-        className="mt-10 h-[520px] w-full rounded-3xl object-cover"
+        className="mt-10 h-auto max-h-[520px] w-full rounded-3xl object-cover"
       />
 
-      <p className="mt-8 leading-8 text-gray-700 whitespace-pre-line">
+      <PropertyInfo info={property.info} landmarks={property.landmarks} section="facts" />
+<p className="mt-4 text-sm text-gray-500">資料發布：<time dateTime={property.date}>{property.date}</time>。價格與可售戶別請洽詢確認。</p>
+<PropertyInquiry name={property.name} slug={property.slug} line={property.personalLine} />
+<p className="mt-8 leading-8 text-gray-700 whitespace-pre-line">
         {property.description}
       </p>
 
@@ -105,6 +111,7 @@ export default async function PropertyDetailPage({
 />
 
       <PropertyInfo
+        section="location"
         info={property.info}
         landmarks={property.landmarks}
       />

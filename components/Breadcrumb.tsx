@@ -2,13 +2,15 @@ import Link from "next/link";
 
 type BreadcrumbProps = {
   title: string;
+  category?: { name: string; href: string };
 };
 
 export default function Breadcrumb({
   title,
+  category = { name: "房產", href: "/property" },
 }: BreadcrumbProps) {
   return (
-    <nav className="mb-10 text-sm text-gray-500">
+    <nav aria-label="目前位置" className="mb-8 text-sm text-gray-500">
       <ol className="flex flex-wrap items-center gap-2">
 
         <li>
@@ -24,16 +26,16 @@ export default function Breadcrumb({
 
         <li>
           <Link
-            href="/property"
+            href={category.href}
             className="hover:text-emerald-600"
           >
-            房產
+            {category.name}
           </Link>
         </li>
 
         <li>/</li>
 
-        <li className="font-semibold text-gray-800">
+        <li aria-current="page" className="font-semibold text-gray-800">
           {title}
         </li>
 

@@ -1,22 +1,24 @@
 import FeatureCards from "../components/FeatureCards";
 import LatestPosts from "../components/LatestPosts";
 import AboutMe from "../components/AboutMe";
-import OpeningCover from "../components/OpeningCover";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = { alternates: { canonical: "/" }, openGraph: { title: "台客在清邁｜房產與在地生活", description: "在清邁生活的台灣人，分享在地生活，協助你找到適合的清邁房產。", url: "/", images: ["/images/hero/hero-v1.jpg"] } };
 
 export default function Home() {
   return (
     <>
-      <OpeningCover />
 
-      <main className="relative flex min-h-[78vh] lg:min-h-screen items-center justify-center overflow-hidden">
+
+      <main className="relative flex min-h-[78vh] lg:min-h-[78vh] py-16 items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
 
-  {/* 手機版背景（測試用） */}
+  {/* 手機版背景 */}
 <div
   className="absolute inset-0 bg-cover bg-center lg:hidden"
   style={{
-    backgroundImage: "url('/images/opening-cover.jpg')",
+    backgroundImage: "url('/images/hero/hero-v1.jpg')",
   }}
 />
 
@@ -28,7 +30,7 @@ export default function Home() {
     }}
   />
 
-  <div className="absolute inset-0 bg-black/45"></div>
+  <div className="absolute inset-0 bg-black/60"></div>
 
 </div>
 
@@ -49,9 +51,9 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-200 lg:mt-8 lg:max-w-3xl lg:text-2xl lg:leading-9">
-            台灣人在清邁
+            在清邁生活的台灣人，帶你認識在地生活，
             <br />
-            最完整的生活指南
+            也協助你找到適合的清邁房產。
           </p>
 
           <div className="mt-8 flex flex-col gap-4 lg:mt-10 lg:flex-row lg:justify-center">

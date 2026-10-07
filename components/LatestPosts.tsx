@@ -8,7 +8,7 @@ export default function LatestPosts() {
   return (
     <section className="bg-stone-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-end justify-between">
+        <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">
               Latest Articles
@@ -23,12 +23,12 @@ export default function LatestPosts() {
             </p>
           </div>
 
-          <a
-            href="#"
-            className="hidden font-semibold text-emerald-600 md:block"
+          <Link
+            href="/articles"
+            className="py-3 font-semibold text-emerald-700"
           >
             查看全部 →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
@@ -49,6 +49,7 @@ export default function LatestPosts() {
                   <span className="text-sm font-semibold text-emerald-600">
                     {post.category}
                   </span>
+                  <time dateTime={post.date} className="ml-3 text-sm text-gray-500">{post.date}</time>
 
                   <h3 className="mt-3 text-2xl font-bold">
                     {post.title}
