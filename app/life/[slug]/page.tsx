@@ -6,6 +6,7 @@ import { site } from "@/data/site";
 import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import ArticleBody from "@/components/ArticleBody";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -43,18 +44,32 @@ export default async function LifeDetailPage({
       </p>
       <p className="mt-4 text-sm text-gray-500">發布日期：<time dateTime={article.date}>{article.date}</time></p>
 
-      <img
+      {article.sections ? <Image
+        src={`/images/life/${article.slug}/${article.cover}`}
+        alt={article.title}
+        width={1122}
+        height={1402}
+        sizes="(max-width: 768px) 100vw, 672px"
+        className="mx-auto mt-10 h-auto w-full max-w-2xl rounded-2xl"
+      /> : <img
   src={`/images/life/${article.slug}/${article.cover}`}
   alt={article.title}
   className="mt-10 max-h-[500px] w-full rounded-3xl object-cover"
-/>
+/>}
 
       <section className="mt-16">
         <h2 className="text-3xl font-bold">
           文章內容
         </h2>
 
-        <ArticleBody text={article.description} />
+        {article.sections ? <div className="mx-auto max-w-2xl">
+          {article.sections.map((section) => <div key={section.image} className="mb-12">
+            <ArticleBody text={section.text} />
+            <a href={`/images/life/${article.slug}/${section.image}`} target="_blank" rel="noopener noreferrer" aria-label={`查看原圖：${section.alt}`} className="mt-8 block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700">
+              <Image src={`/images/life/${article.slug}/${section.image}`} alt={section.alt} width={1122} height={1402} sizes="(max-width: 768px) 100vw, 672px" className="h-auto w-full rounded-2xl" />
+            </a>
+          </div>)}
+        </div> : <ArticleBody text={article.description} />}
       </section>
 
       <RelatedArticleLinks

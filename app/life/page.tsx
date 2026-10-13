@@ -23,7 +23,7 @@ export default function LifePage() {
             <img
               src={`/images/life/${article.slug}/${article.cover}`}
               alt={article.title}
-              className="h-56 w-full object-cover"
+              className={`h-56 w-full ${article.sections ? "bg-stone-100 object-contain" : "object-cover"}`}
             />
 
             <div className="p-6">

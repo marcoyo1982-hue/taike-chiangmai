@@ -20,7 +20,7 @@ export default function ArticleDirectory({ articles }: { articles: CatalogArticl
     {filtered.length === 0 && <div className="py-12 text-center"><p>沒有符合的文章，試試其他關鍵字或分類。</p><button type="button" onClick={() => { setQuery(""); setCategory("全部"); }} className="mt-4 rounded-full border px-5 py-3">清除搜尋條件</button></div>}
     <div className="mt-6 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {filtered.map((item) => <Link key={item.href} href={item.href} className="overflow-hidden rounded-3xl border border-stone-200 bg-white transition hover:shadow-lg">
-        <div className="relative aspect-[16/10]"><Image src={item.image} alt={item.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className="object-cover" /></div>
+        <div className="relative aspect-[16/10]"><Image src={item.image} alt={item.title} fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className={item.containImage ? "bg-stone-100 object-contain" : "object-cover"} /></div>
         <div className="p-6"><p className="text-sm text-emerald-800">{item.category}{item.date && <> · <time dateTime={item.date}>{item.date}</time></>}</p><h2 className="mt-3 text-xl font-bold leading-8">{item.title}</h2><p className="mt-3 line-clamp-3 leading-7 text-gray-600">{item.description}</p><p className="mt-5 font-semibold text-emerald-800">閱讀文章 →</p></div>
       </Link>)}
     </div>

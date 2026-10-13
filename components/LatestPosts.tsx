@@ -41,7 +41,7 @@ export default function LatestPosts() {
                     alt={post.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition duration-500 hover:scale-105"
+                    className={post.containImage ? "bg-stone-100 object-contain" : "object-cover transition duration-500 hover:scale-105"}
                   />
                 </div>
 

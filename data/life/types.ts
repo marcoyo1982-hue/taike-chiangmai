@@ -10,6 +10,7 @@ description: string;
 
   cover: string;
   gallery: string[];
+  sections?: { text: string; image: string; alt: string }[];
 
   date: string;
 
