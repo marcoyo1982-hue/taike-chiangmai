@@ -28,7 +28,7 @@ export default function TravelsPage() {
             <img
               src={`/travels/${travel.slug}/${travel.cover}`}
               alt={travel.name}
-              className="h-56 w-full object-cover"
+              className={travel.sections ? "h-56 w-full object-contain bg-stone-50" : "h-56 w-full object-cover"}
             />
 
             <div className="p-6">
@@ -42,7 +42,7 @@ export default function TravelsPage() {
               </p>
 
               <p className="mt-6 font-semibold text-emerald-600">
-                查看景點 →
+                {travel.sections ? "閱讀文章 →" : "查看景點 →"}
               </p>
 
             </div>

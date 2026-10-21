@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ArticleBody from "@/components/ArticleBody";
 import { notFound } from "next/navigation";
 import { travels } from "@/data/travels";
@@ -88,17 +89,24 @@ export default async function TravelDetailPage({
           {travel.contentTitle ?? "景點介紹"}
         </h2>
 
-        <ArticleBody text={travel.description} />
+        {travel.sections ? travel.sections.map((section, index) => (
+          <div key={index} className="mt-10">
+            {section.image && <a href={`/travels/${travel.slug}/${section.image}`} target="_blank" rel="noopener noreferrer" aria-label={`${section.alt}，開啟原尺寸圖片`}>
+              <Image src={`/travels/${travel.slug}/${section.image}`} alt={section.alt ?? travel.name} width={1672} height={941} sizes="(max-width: 1024px) 100vw, 976px" className="h-auto w-full rounded-2xl" />
+            </a>}
+            <ArticleBody text={section.text} />
+          </div>
+        )) : <ArticleBody text={travel.description} />}
 
       </section>
 
-      <Gallery
+      {(!travel.sections || travel.gallery.length > 0) && <Gallery
         folder="travels"
         slug={travel.slug}
         images={travel.gallery}
         title={travel.galleryTitle ?? "店內環境"}
         downloadable={travel.downloadableGallery}
-      />
+      />}
       {travel.embed && (
         <GoogleMap
           embed={travel.embed}

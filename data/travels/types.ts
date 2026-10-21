@@ -1,4 +1,6 @@
 export interface Travel {
+  sections?: { text: string; image?: string; alt?: string }[];
+  date?: string;
   slug: string;
 
   name: string;
