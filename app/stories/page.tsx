@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "清邁怪談｜最後一班紅色雙條車・第三道門｜台客在清邁",
-  description: "觀看《清邁怪談》EP.04《最後一班紅色雙條車》與 EP.03《第三道門》完整漫劇。",
+  title: "清邁怪談｜樓下在曬什麼・最後一班紅色雙條車｜台客在清邁",
+  description: "閱讀 EP.05《樓下在曬什麼》，觀看 EP.04《最後一班紅色雙條車》與 EP.03《第三道門》完整漫劇。",
   alternates: { canonical: "/stories" },
   openGraph: { title: "清邁怪談｜最後一班紅色雙條車", description: "有些人，只是還沒搭上回家的車……台客在清邁原創怪談系列。", url: "/stories", images: ["/stories/ep04/cover.png"] },
 };
@@ -14,6 +14,18 @@ export default function StoriesPage() {
       <p className="text-sm tracking-[0.25em] text-red-300">台客在清邁 · 原創漫劇</p>
       <h1 className="mt-4 text-4xl font-bold tracking-wider sm:text-6xl">清邁怪談</h1>
       <p className="mt-6 max-w-2xl text-lg leading-9 text-stone-300">每一個怪談，都有自己的規則。<br />而你通常是在違反規則以後，才知道規則存在。</p>
+      <article id="ep05" className="mt-12 grid scroll-mt-28 items-start gap-10 border-b border-stone-800 pb-12 md:grid-cols-[1fr_1.2fr]">
+        <a href="/stories/ep05/read" aria-label="閱讀樓下在曬什麼完整圖文">
+          <Image src="/stories/ep05/P00_cover.png" alt="台客怪談 EP.05 樓下在曬什麼封面" width={1024} height={1536} sizes="(max-width: 767px) 100vw, 42vw" className="h-auto w-full rounded-2xl" />
+        </a>
+        <div className="py-2 md:py-8">
+          <p className="text-sm font-semibold tracking-widest text-red-300">EP.05 · 完整圖文 · 36 頁</p>
+          <h2 className="mt-4 text-4xl font-bold">樓下在曬什麼</h2>
+          <p className="mt-8 text-2xl leading-relaxed">阿森第一次看見那隻耳朵，<br />是在下午兩點。</p>
+          <p className="mt-6 leading-8 text-stone-300">剛搬進清邁老公寓的阿森，望向對面的陽台。老太太正在曬東西，竹竿上卻沒有衣服……</p>
+          <a href="/stories/ep05/read" className="mt-8 inline-flex rounded-full bg-red-800 px-7 py-4 font-semibold text-white hover:bg-red-700">閱讀 EP.05 完整圖文 →</a>
+        </div>
+      </article>
       <article className="mt-12 grid items-start gap-10 md:grid-cols-[1fr_1.2fr]">
         <Image src="/stories/ep04/cover.png" alt="清邁怪談 EP.04 最後一班紅色雙條車封面" width={1024} height={1536} sizes="(max-width: 767px) 100vw, 42vw" className="h-auto w-full rounded-2xl" />
         <div className="py-2 md:py-8">
@@ -22,6 +34,7 @@ export default function StoriesPage() {
           <p className="mt-8 text-2xl leading-relaxed">有些人，<br />只是還沒搭上<span className="text-red-400">回家的車</span>……</p>
           <p className="mt-6 leading-8 text-stone-300">晚上十一點四十分，小晴在清邁古城南側的街道等車。一輛褪色的紅色雙條車，從前方緩緩駛近。</p>
           <a href="#ep04" className="mt-8 inline-flex rounded-full bg-red-800 px-7 py-4 font-semibold text-white hover:bg-red-700">觀看 EP.04 完整漫劇 ↓</a>
+          <a href="/stories/ep04/read" className="mt-4 inline-flex rounded-full border border-stone-600 px-7 py-4 font-semibold text-stone-100 hover:bg-stone-800 md:ml-3">圖文閱讀版 →</a>
           <p className="mt-8 border-t border-stone-800 pt-5 text-sm leading-7 text-stone-400">本集為虛構創作故事，不代表真實交通業者、人物或事件。</p>
         </div>
       </article>
