@@ -8,7 +8,7 @@ const life: Life = {
   date: "2026-10-29",
   category: "清邁生活",
   cover: "01-cover.webp",
-  gallery: ["02-food-comparison.webp", "03-food-budget.webp", "04-housing.webp", "05-transport.webp", "06-other-costs.webp", "07-budget-sheet.webp", "08-question.webp"],
+  gallery: ["02-food-comparison.webp", "04-housing.webp", "05-transport.webp", "06-other-costs.webp", "07-budget-sheet.webp", "08-question.webp"],
   description: "",
   sections: [
     { text: `「台客，搬去清邁一個月到底要花多少錢？」
@@ -21,8 +21,9 @@ const life: Life = {
 
 ## 第一筆是吃
 
-清邁確實有很多可以日常吃的小店和市場，但如果你的生活習慣是天天早午餐、咖啡廳、進口超市，那就不要拿一碗便宜的泰式麵來估自己的餐費。拿當地小吃的價格，去比較台灣的餐廳消費，這個算法一開始就歪了。`, image: "02-food-comparison.webp", alt: "街邊小吃與咖啡廳生活的對照" },
-    { text: "拿一碗麵的價格推算整個月餐費，很容易忽略實際的飲食習慣。", image: "03-food-budget.webp", alt: "以一碗麵推算整月餐費的提醒" },
+清邁確實有很多可以日常吃的小店和市場，但如果你的生活習慣是天天早午餐、咖啡廳、進口超市，那就不要拿一碗便宜的泰式麵來估自己的餐費。拿當地小吃的價格，去比較台灣的餐廳消費，這個算法一開始就歪了。
+
+拿一碗麵的價格推算整個月餐費，很容易忽略實際的飲食習慣。`, image: "02-food-comparison.webp", alt: "街邊小吃與咖啡廳生活的對照" },
     { text: `## 第二筆是住
 
 看到房租心動很正常，但每個月還有電費、水費、網路，某些社區或住法也有其他固定開銷。住得遠一點也許空間大、租金漂亮，可是天天來回跑，省下的房租可能又跑到交通費去。`, image: "04-housing.webp", alt: "房租以外的生活帳單" },
