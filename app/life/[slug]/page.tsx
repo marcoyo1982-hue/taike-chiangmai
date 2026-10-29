@@ -66,7 +66,7 @@ export default async function LifeDetailPage({
           {article.sections.map((section) => <div key={section.image} className="mb-12">
             <ArticleBody text={section.text} />
             <a href={`/images/life/${article.slug}/${section.image}`} target="_blank" rel="noopener noreferrer" aria-label={`查看原圖：${section.alt}`} className="mt-8 block rounded-2xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-700">
-              <Image src={`/images/life/${article.slug}/${section.image}`} alt={section.alt} width={1122} height={1402} sizes="(max-width: 768px) 100vw, 672px" className="h-auto w-full rounded-2xl" />
+              <Image src={`/images/life/${article.slug}/${section.image}`} alt={section.alt} width={article.slug === "chiangmai-cost-of-living-real-budget" ? 1672 : 1122} height={article.slug === "chiangmai-cost-of-living-real-budget" ? 941 : 1402} sizes="(max-width: 768px) 100vw, 672px" className="h-auto w-full rounded-2xl" />
             </a>
           </div>)}
         </div> : <ArticleBody text={article.description} />}
