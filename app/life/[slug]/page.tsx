@@ -44,7 +44,7 @@ export default async function LifeDetailPage({
       </p>
       <p className="mt-4 text-sm text-gray-500">發布日期：<time dateTime={article.date}>{article.date}</time></p>
 
-      {article.sections ? <Image
+      {article.slug === "chiangmai-cost-of-living-real-budget" ? null : article.sections ? <Image
         src={`/images/life/${article.slug}/${article.cover}`}
         alt={article.title}
         width={1122}
