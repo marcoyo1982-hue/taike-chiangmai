@@ -28,7 +28,7 @@ export default function EpisodeFiveReader() {
             <figure key={page} id={`page-${page}`} className="mt-8 scroll-mt-24">
               <figcaption className="px-4 py-3 text-sm text-stone-400">P{page} / 36</figcaption>
               <a href={src} target="_blank" rel="noopener noreferrer" aria-label={`開啟第 ${index + 1} 頁大圖（新分頁）`}>
-                <Image src={src} alt={`樓下在曬什麼第 ${index + 1} 頁，含原圖對白與旁白`} width={1024} height={1536} loading="lazy" unoptimized className="h-auto w-full" />
+                <Image src={`/stories/ep05/P${page}.webp`} alt={`樓下在曬什麼第 ${index + 1} 頁，含原圖對白與旁白`} width={1024} height={1536} loading="lazy" unoptimized className="h-auto w-full" />
               </a>
             </figure>
           );

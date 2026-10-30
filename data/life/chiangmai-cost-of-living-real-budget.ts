@@ -8,7 +8,7 @@ const life: Life = {
   date: "2026-10-29",
   category: "清邁生活",
   cover: "01-cover-landscape.webp",
-  gallery: ["02-food-comparison-landscape.webp", "04-housing-landscape.webp", "05-transport-landscape.webp", "06-other-costs-landscape.webp", "07-budget-sheet-landscape.webp", "08-question-landscape.webp"],
+  gallery: ["02-food-comparison-landscape.webp", "04-housing-landscape.webp", "05-transport-landscape.webp", "06-other-costs-landscape.webp", "07-budget-sheet-landscape.webp"],
   description: "",
   sections: [
     { text: `「台客，搬去清邁一個月到底要花多少錢？」
@@ -38,16 +38,6 @@ const life: Life = {
     { text: `準備來清邁長住的朋友，我建議先做一張自己的預算表，把「吃、住、行、醫療保險與其他」分開寫；每一項各做一個「節省版」和「舒服版」。這樣算出來的數字，才有可能接近你真正會花的錢。
 
 不要光看別人一碗麵吃多少，就以為自己搬來也能照那個價錢生活。到時候荷包有意見，別來怪台客我沒先講。😂`, image: "07-budget-sheet-landscape.webp", alt: "長住預算表的節省版與舒服版" },
-    { text: `## 換你說：如果在清邁長住，你覺得最容易超出預算的是哪一項？
-
-A. 吃飯、咖啡、餐廳
-B. 房租與居住開銷
-C. 交通
-D. 醫療保險／其他
-
-留言 A、B、C、D，我想看看大家的答案。
-
-#台客在清邁 #清邁生活 #清邁長居 #清邁物價 #泰國生活`, image: "08-question-landscape.webp", alt: "長住生活費最容易超支的項目" },
   ],
   tags: ["清邁生活", "清邁長居", "清邁物價", "泰國生活"],
 };
