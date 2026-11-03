@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "清邁怪談｜樓下在曬什麼・最後一班紅色雙條車｜台客在清邁",
-  description: "閱讀 EP.05《樓下在曬什麼》，觀看 EP.04《最後一班紅色雙條車》與 EP.03《第三道門》完整漫劇。",
+  title: "清邁怪談｜素帖山，別往樹上照・樓下在曬什麼｜台客在清邁",
+  description: "閱讀最新 EP.06《素帖山，別往樹上照》43 頁完整漫畫，以及 EP.05《樓下在曬什麼》等台客原創怪談。",
   alternates: { canonical: "/stories" },
-  openGraph: { title: "清邁怪談｜最後一班紅色雙條車", description: "有些人，只是還沒搭上回家的車……台客在清邁原創怪談系列。", url: "/stories", images: ["/stories/ep04/cover.png"] },
+  openGraph: { title: "台客怪談 EP.06｜素帖山，別往樹上照", description: "每一個怪談，都有自己的規則。43 頁完整黑白漫畫現已上線。", url: "/stories", images: ["/stories/ep06/P01.png"] },
 };
 
 export default function StoriesPage() {
@@ -14,6 +14,19 @@ export default function StoriesPage() {
       <p className="text-sm tracking-[0.25em] text-red-300">台客在清邁 · 原創漫劇</p>
       <h1 className="mt-4 text-4xl font-bold tracking-wider sm:text-6xl">清邁怪談</h1>
       <p className="mt-6 max-w-2xl text-lg leading-9 text-stone-300">每一個怪談，都有自己的規則。<br />而你通常是在違反規則以後，才知道規則存在。</p>
+      <article id="ep06" className="mt-12 grid scroll-mt-28 items-start gap-10 border-b border-stone-800 pb-12 md:grid-cols-[1fr_1.2fr]">
+        <a href="/stories/ep06/read" aria-label="閱讀素帖山，別往樹上照完整漫畫">
+          <Image src="/stories/ep06/P01.webp" alt="台客怪談 EP.06 素帖山，別往樹上照第一頁" width={1024} height={1536} unoptimized className="h-auto w-full rounded-2xl" />
+        </a>
+        <div className="py-2 md:py-8">
+          <p className="text-sm font-semibold tracking-widest text-red-300">最新 EP.06 · 完整漫畫 · 43 頁</p>
+          <h2 className="mt-4 text-4xl font-bold leading-snug">素帖山，別往樹上照</h2>
+          <p className="mt-8 text-2xl leading-relaxed">每一個怪談，<br />都有自己的規則。</p>
+          <p className="mt-6 leading-8 text-stone-300">而你通常是在違反規則以後，才知道規則存在。跟著 Marco 與 YAYA 走進素帖山，閱讀這一夜的故事。</p>
+          <a href="/stories/ep06/read" className="mt-8 inline-flex rounded-full bg-red-800 px-7 py-4 font-semibold text-white hover:bg-red-700">閱讀 EP.06 完整漫畫 →</a>
+          <p className="mt-5 text-sm leading-7 text-stone-400">大字圖文版 · 點選圖片可放大閱讀</p>
+        </div>
+      </article>
       <article id="ep05" className="mt-12 grid scroll-mt-28 items-start gap-10 border-b border-stone-800 pb-12 md:grid-cols-[1fr_1.2fr]">
         <a href="/stories/ep05/read" aria-label="閱讀樓下在曬什麼完整圖文">
           <Image src="/stories/ep05/P00_cover.png" alt="台客怪談 EP.05 樓下在曬什麼封面" width={1024} height={1536} sizes="(max-width: 767px) 100vw, 42vw" className="h-auto w-full rounded-2xl" />
