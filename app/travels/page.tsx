@@ -28,7 +28,7 @@ export default function TravelsPage() {
             <img
               src={`/travels/${travel.slug}/${travel.cover}`}
               alt={travel.name}
-              className={travel.sections ? "h-56 w-full object-contain bg-stone-50" : "h-56 w-full object-cover"}
+              className={travel.cover === "cover-landscape.webp" ? "aspect-[16/10] w-full object-contain" : travel.sections ? "h-56 w-full object-contain bg-stone-50" : "h-56 w-full object-cover"}
             />
 
             <div className="p-6">
