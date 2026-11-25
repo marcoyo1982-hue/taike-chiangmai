@@ -110,11 +110,11 @@ export default async function PropertyDetailPage({
   videoTitles={property.videoTitles}
 />
 
-      <PropertyInfo
+      {property.landmarks.length > 0 && <PropertyInfo
         section="location"
         info={property.info}
         landmarks={property.landmarks}
-      />
+      />}
 
       {property.embed && (
         <GoogleMap
@@ -123,10 +123,10 @@ export default async function PropertyDetailPage({
         />
       )}
 
-      <PdfDownload
+      {(property.pdf || property.pdfs?.length) ? <PdfDownload
         pdf={property.pdf}
         pdfs={property.pdfs}
-      />
+      /> : null}
 
       <ConsultantCard
         personalLine={property.personalLine}

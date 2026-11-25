@@ -13,6 +13,8 @@ export interface Travel {
 
   cover: string;
 
+  video?: string;
+  sources?: { label: string; href: string }[];
   gallery: string[];
 
   galleryTitle?: string;

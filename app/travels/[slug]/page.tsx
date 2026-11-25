@@ -100,6 +100,14 @@ export default async function TravelDetailPage({
 
       </section>
 
+      {travel.video && (
+        <video controls playsInline preload="metadata" aria-label={travel.name} poster={`/travels/${slug}/${travel.cover}`} src={`/travels/${slug}/${travel.video}`} className="mx-auto mt-10 max-h-[80vh] max-w-full rounded-2xl" />
+      )}
+      {travel.sources?.length ? (
+        <ul className="mt-8 space-y-2">
+          {travel.sources.map(({ label, href }) => <li key={href}><a href={href} className="text-emerald-700 underline">{label}</a></li>)}
+        </ul>
+      ) : null}
       {(!travel.sections || travel.gallery.length > 0) && <Gallery
         folder="travels"
         slug={travel.slug}

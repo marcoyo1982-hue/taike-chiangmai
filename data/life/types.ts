@@ -9,6 +9,7 @@ description: string;
   category: string;
 
   cover: string;
+  video?: string;
   gallery: string[];
   sections?: { text: string; image: string; alt: string }[];
 

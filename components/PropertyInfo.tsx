@@ -118,6 +118,7 @@ function InfoCard({
   title: string;
   value: string;
 }) {
+  if (!value) return null;
   return (
     <div className="group rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-xl">
 

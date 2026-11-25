@@ -72,6 +72,9 @@ export default async function LifeDetailPage({
         </div> : <ArticleBody text={article.description} />}
       </section>
 
+      {article.video && (
+        <video controls playsInline preload="metadata" aria-label={article.title} poster={`/images/life/${slug}/${article.cover}`} src={`/images/life/${slug}/${article.video}`} className="mx-auto mt-10 max-h-[80vh] max-w-full rounded-2xl" />
+      )}
       <RelatedArticleLinks
         currentSlug={article.slug}
         articles={life.map((item) => ({ slug: item.slug, title: item.title }))}
